@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Royal Dashboard - UTS</title>
+  <meta name="description" content="Dashboard UTS - Royal" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo-square">R</div>
+        <div class="brand-text">
+          <div class="brand-title">Royal Dashboard</div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <button class="menu-item active">Home</button>
+        <button class="menu-item">Mahasiswa</button>
+        <button class="menu-item">Kelas</button>
+        <button class="menu-item">Aktifitas</button>
+        <button class="menu-item">Statistik</button>
+        <button class="menu-item">Dokumen</button>
+        <button class="menu-item">Settings</button>
+        <button class="menu-item signout">Sign Out</button>
+      </nav>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <div class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <!-- empty to align -->
+        </div>
+        <div class="topbar-right">
+          <!-- <input class="search" placeholder="Cari Kelas, Dokumen, Aktifitas dll..." aria-label="search" /> -->
+          <div class="search-box">
+  <span class="search-icon">🔍</span>
+  <input type="text" placeholder="Cari Kelas, Dokumen, Aktifitas dll..." />
+</div>
+
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- hero banner -->
+        <section class="hero">
+          <div class="hero-left">
+            <div class="welcome-title">Selamat Datang, <span class="name">NISMA AURA KUMALA</span></div>
+            <div class="class-title">Kelas SI-3D</div>
+            <p class="hero-desc">Kamu memiliki Statistik, 3 Progres Kelas, 4 Aktifitas Selanjutnya dan 3 Lampiran Dokumen yang ada pada aplikasi ini.</p>
+          </div>
+          <div class="hero-right">
+            <div class="avatar">
+              <img src="profil.jpeg" alt="avatar">
+            </div>
+          </div>
+        </section>
+
+        <!-- top cards row (chart + 2 columns) -->
+       <section class="three-cards">
+  
+  <div class="card chart-card">
+    <div class="card-title">Statistik Mahasiswa</div>
+    <canvas id="barChart"></canvas>
+  </div>
+
+  <div class="card mini-card">
+    <div class="card-title">Progres Kelas</div>
+    <div class="prog-item">Matakuliah A – 78 Pendaftar</div>
+    <div class="prog-item">Matakuliah B – 30 Pendaftar</div>
+    <div class="prog-item">Matakuliah C – 40 Pendaftar</div>
+    <div class="prog-item">Matakuliah D – 10 Pendaftar</div>
+  </div>
+
+  <div class="card mini-card">
+    <div class="card-title">Aktifitas Selanjutnya</div>
+    <div class="event-item"><strong>Perkuliahan Daring 1</strong><br> Senin, 15 Januari 2025</div>
+    <div class="event-item"><strong>Perkuliahan Daring 1</strong><br> Selasa, 15 Februari 2025</div>
+    <div class="event-item"><strong>Perkuliahan Daring 1</strong><br> Rabu, 15 Maret 2025</div>
+    <div class="event-item"><strong>Perkuliahan Daring 1</strong><br> Kamis, 15 April 2025</div>
+  </div>
+
+</section>
+
+
+        <!-- attachments (full width) -->
+        <section class="attachments">
+          <div class="card">
+            <div class="card-title">Lampiran</div>
+
+            <div class="attach-list">
+              <div class="attach-item">
+                <div class="attach-left">
+                  <div class="attach-title">Lampiran Dokumen 1 - Matakuliah A | Tugas Bersama Perkuliahan Daring</div>
+                </div>
+                <div class="attach-right">
+                  <a class="link" href="#">Lihat Dokumen</a>
+                </div>
+              </div>
+
+              <div class="attach-item">
+                <div class="attach-left">
+                  <div class="attach-title">Lampiran Dokumen 2 - Matakuliah B | Tugas Bersama Perkuliahan Daring</div>
+                </div>
+                <div class="attach-right">
+                  <a class="link" href="#">Lihat Dokumen</a>
+                </div>
+              </div>
+
+              <div class="attach-item">
+                <div class="attach-left">
+                  <div class="attach-title">Lampiran Dokumen 3 - Matakuliah C | Tugas Bersama Perkuliahan Daring</div>
+                </div>
+                <div class="attach-right">
+                  <a class="link" href="#">Lihat Dokumen</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <div>© <span id="year"></span> Fakultas Ilmu Komputer — Universitas Royal</div>
+      </footer>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
